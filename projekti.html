@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekti | FIN ARS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg-dark:#0f0f0f; --bg-light:#f8f7f5; --text-dark:#1a1a1a; --text-light:#f5f5f5; --accent:#8a7f72; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:var(--bg-dark);color:var(--text-light);line-height:1.6}
+        h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
+        header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(15,15,15,0.95)}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;letter-spacing:0.15em;text-decoration:none;color:var(--text-light)}
+        .logo span{font-weight:300;opacity:0.7;font-size:0.85em}
+        nav ul{display:flex;list-style:none;gap:2.5rem}
+        nav a{color:var(--text-light);text-decoration:none;font-size:0.85rem;letter-spacing:0.12em;text-transform:uppercase;opacity:0.85}
+        nav a:hover{opacity:1}
+        .page-hero{padding:10rem 2rem 4rem;text-align:center}
+        .page-hero h1{font-size:clamp(2.5rem,5vw,4rem);letter-spacing:0.08em;margin-bottom:1rem}
+        .section-line{width:60px;height:1px;background:var(--accent);margin:0 auto 3rem}
+        .container{max-width:1200px;margin:0 auto;padding:0 2rem 5rem}
+        .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2rem}
+        .project-card{position:relative;overflow:hidden;aspect-ratio:4/3;background:#222;display:block;text-decoration:none;color:white}
+        .project-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s}
+        .project-card:hover img{transform:scale(1.06)}
+        .project-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.8rem}
+        .project-overlay h3{font-size:1.4rem;margin-bottom:0.3rem}
+        .project-overlay span{font-size:0.8rem;letter-spacing:0.08em;text-transform:uppercase;opacity:0.8}
+        footer{background:#0a0a0a;padding:2rem;text-align:center;font-size:0.85rem;opacity:0.6}
+        @media(max-width:768px){header{padding:1.2rem 1.5rem}nav ul{display:none}}
+    </style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">FIN ARS <span>| arhitektura</span></a>
+    <nav>
+        <ul>
+            <li><a href="index.html#onas">O nas</a></li>
+            <li><a href="index.html#storitve">Storitve</a></li>
+            <li><a href="projekti.html">Projekti</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Projekti</h1>
+    <div class="section-line"></div>
+    <p style="opacity:0.8;max-width:600px;margin:0 auto">Izbor arhitekturnih in notranjeoblikovalskih projektov biroja FIN ARS</p>
+</section>
+
+<div class="container">
+    <div class="projects-grid">
+        <a href="projekti/hisa-v-gozdu.html" class="project-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Hiša v gozdu">
+            <div class="project-overlay">
+                <h3>Hiša v gozdu</h3>
+                <span>2013 · 2015 · Stanovanjska hiša</span>
+            </div>
+        </a>
+        <a href="projekti/stanovanja-r.html" class="project-card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Stanovanja R">
+            <div class="project-overlay">
+                <h3>Stanovanja R</h3>
+                <span>2010 · Rogaška Slatina</span>
+            </div>
+        </a>
+        <a href="projekti/ptic-portoroz.html" class="project-card">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="PTIC Portorož">
+            <div class="project-overlay">
+                <h3>Študentski dom PTIC</h3>
+                <span>2014 · 2016 · Portorož</span>
+            </div>
+        </a>
+        <a href="projekti/podcetrtek.html" class="project-card">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Podčetrtek">
+            <div class="project-overlay">
+                <h3>Stanovanjsko naselje Podčetrtek</h3>
+                <span>2013 · Javni objekt</span>
+            </div>
+        </a>
+        <a href="projekti/olimpijski-bazen-libija.html" class="project-card">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdbc?auto=format&fit=crop&w=800&q=80" alt="Olimpijski bazen">
+            <div class="project-overlay">
+                <h3>Olimpijski bazen in wellness</h3>
+                <span>2013 · Libija</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 FIN ARS d.o.o. · Center za arhitekturo, gradbeno projektiranje in druge storitve</p>
+</footer>
+</body>
+</html>

@@ -1,35 +1,30 @@
 # FIN ARS – ReDesign 5
 
-Modern redesign of the **FIN ARS d.o.o.** website (www.finars.si), inspired by the elegant minimalist aesthetic of [Sato Interior Design](https://www.sato-interiordesign.com/).
+Modern redesign of **www.finars.si** inspired by Sato Interior Design aesthetic.
 
-## About FIN ARS
+## What's included
 
-FIN ARS d.o.o. is an architectural studio based in Zagorje ob Savi, Slovenia.  
-Founded in 2006. Specializing in architectural design, building documentation, interior design, and construction supervision.
+- Elegant single-page homepage
+- **Project subpages** with real descriptions from the original finars.si site:
+  - Hiša v gozdu (2013/2015)
+  - Stanovanja R (2010, Rogaška Slatina)
+  - Študentski dom PTIC Portorož (2014/2016)
+  - Stanovanjsko naselje Podčetrtek (2013)
+  - Olimpijski bazen in wellness (Libija, 2013)
+- Image gallery with **lightbox zoom** (click any image to enlarge, ESC or click to close)
+- Fully responsive design
 
-**Directors:**  
-- Kristijan Čuk, u.d.i.a. (Professional Director)  
-- Borut Dolar (Business Director)
+## Note about images
 
-## Design Inspiration
+Original project photos from finars.si could not be scraped (site is protected by bot verification). High-quality architecture placeholder images from Unsplash are used instead. Replace them with real project photos when available.
 
-This redesign follows the clean, premium visual language of Sato Interior Design:
-- Large hero imagery
-- Elegant serif + sans typography
-- Strong contrast between dark and light sections
-- Minimal navigation
-- Focus on visual storytelling
+## Live demo
 
-## Live Preview
+Enable GitHub Pages (Settings → Pages → Deploy from branch `main`) then visit:
+https://tommyvimeo-gif.github.io/Finars-ReDesign-5/
 
-Open `index.html` in a browser or enable GitHub Pages.
+## Contact (FIN ARS d.o.o.)
 
-## Contact
-
-- **Address:** Podvine 36, 1410 Zagorje ob Savi
-- **Phone:** 03 566 05 46 / 041 686 959
-- **Email:** info@finars.si
-
----
-
-*Redesign created as a conceptual prototype.*
+- Podvine 36, 1410 Zagorje ob Savi
+- 03 566 05 46 / 041 686 959
+- info@finars.si

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiša v gozdu | FIN ARS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg-dark:#0f0f0f;--bg-light:#f8f7f5;--text-dark:#1a1a1a;--text-light:#f5f5f5;--accent:#8a7f72}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:var(--bg-dark);color:var(--text-light);line-height:1.7}
+        h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400}
+        header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(15,15,15,0.95)}
+        .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;letter-spacing:0.12em;text-decoration:none;color:var(--text-light)}
+        .back{color:var(--text-light);text-decoration:none;font-size:0.85rem;letter-spacing:0.1em;opacity:0.8}
+        .back:hover{opacity:1}
+        .hero{height:70vh;min-height:480px;background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover;position:relative}
+        .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(15,15,15,0.9),transparent 50%)}
+        .hero-content{position:absolute;bottom:3rem;left:0;right:0;text-align:center;z-index:2;padding:0 2rem}
+        .hero-content h1{font-size:clamp(2.2rem,5vw,3.5rem);letter-spacing:0.06em;margin-bottom:0.5rem}
+        .meta{font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75}
+        .content{max-width:900px;margin:0 auto;padding:4rem 2rem}
+        .content p{font-size:1.05rem;font-weight:300;opacity:0.9;margin-bottom:1.5rem}
+        .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-top:3rem}
+        .gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;cursor:zoom-in;transition:opacity 0.3s;border-radius:2px}
+        .gallery img:hover{opacity:0.9}
+        /* Lightbox */
+        .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:2000;align-items:center;justify-content:center;cursor:zoom-out}
+        .lightbox.active{display:flex}
+        .lightbox img{max-width:92vw;max-height:90vh;object-fit:contain}
+        .lightbox-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;color:white;cursor:pointer;opacity:0.8}
+        footer{background:#0a0a0a;padding:2rem;text-align:center;font-size:0.85rem;opacity:0.6;margin-top:3rem}
+        @media(max-width:768px){header{padding:1.2rem 1.5rem}}
+    </style>
+</head>
+<body>
+<header>
+    <a href="../index.html" class="logo">FIN ARS</a>
+    <a href="../projekti.html" class="back">← Vsi projekti</a>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h1>Hiša v gozdu</h1>
+        <div class="meta">2013 · Gradnja 2015 · Avtorji: Simon Škrbec, Kristijan Čuk</div>
+    </div>
+</div>
+
+<div class="content">
+    <p>Enodružinska, troetažna stanovanjska hiša, ki ima delno vkopano kletno etažo z garažo.</p>
+    <p>V pritličju se nahaja dnevni del z vetrolovom, vežo, priročnimi sanitarijami ter v enem prostoru odprto kuhinjo, jedilnico ter dnevno sobo. Iz dnevne sobe in jedilnice je preko v celoti zastekljene zahodne fasade direkten izhod na zeleno teraso, ki je delno pokrita s pergolo, ta pa izhaja iz same forme objekta.</p>
+    <p>Iz dnevne sobe je komunikacija v 1. nadstropje, kjer je spalni del z otroško sobo, spalnico, kopalnico in utilityjem. Pritličje in nadstropje sta skupne kvadrature 150 m², kletna etaža z garažo pa ima še dodatnih 90 m².</p>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Hiša v gozdu 1" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80" alt="Hiša v gozdu 2" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=80" alt="Hiša v gozdu 3" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdbc?auto=format&fit=crop&w=900&q=80" alt="Hiša v gozdu 4" onclick="openLightbox(this)">
+    </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+    <p>© 2026 FIN ARS d.o.o.</p>
+</footer>
+
+<script>
+function openLightbox(el){document.getElementById('lightbox-img').src=el.src;document.getElementById('lightbox').classList.add('active')}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()})
+</script>
+</body>
+</html>
